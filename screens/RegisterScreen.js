@@ -6,10 +6,7 @@ import { Button, Input, Text} from 'react-native-elements';
 import { auth } from '../firebase';
 import { TouchableOpacity } from 'react-native';
 import { Avatar } from 'react-native-elements/dist/avatar/Avatar';
-import { Icon } from 'react-native-elements/dist/icons/Icon';
-import { Entypo } from '@expo/vector-icons';
-import { MaterialIcons } from '@expo/vector-icons';
-import { FontAwesome5 } from '@expo/vector-icons';
+import { Entypo, FontAwesome5, MaterialIcons } from '@expo/vector-icons';
 import { Platform } from 'react-native';
 
 const RegisterScreen = ({ navigation }) => {

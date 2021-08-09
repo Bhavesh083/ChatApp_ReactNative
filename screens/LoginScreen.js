@@ -6,6 +6,7 @@ import { KeyboardAvoidingView } from 'react-native';
 import { auth } from '../firebase';
 import { Platform } from 'react-native';
 import { Avatar } from 'react-native-elements';
+import { Entypo, FontAwesome5, MaterialIcons } from '@expo/vector-icons';
 
 const LoginScreen = ({ navigation }) => {
     const [email,setEmail] = useState('');
@@ -48,11 +49,11 @@ const LoginScreen = ({ navigation }) => {
               style={{width:100,height:100,marginBottom: 40}}
             />
             <View style={styles.inputContainer}>
-                <Input  style={styles.inp} placeholder="Email" autoFocus type="email" value={email} onChangeText={(text)=>setEmail(text)} />
-                <Input  style={styles.inp} placeholder="Password" secureTextEntry type="password" value={password} onChangeText={(text)=>setPassword(text)} onSubmitEditing={signIn} />
+                <Input leftIcon={ <MaterialIcons name="email" size={22} color="white" style={{marginRight:5}} /> }  style={styles.inp} placeholder="Email" autoFocus type="email" value={email} onChangeText={(text)=>setEmail(text)} />
+                <Input leftIcon={ <FontAwesome5 name="key" size={22} color="white" style={{marginRight:5}} /> }  style={styles.inp} placeholder="Password" secureTextEntry type="password" value={password} onChangeText={(text)=>setPassword(text)} onSubmitEditing={signIn} />
             </View>
-            <Button title="Login"  containerStyle={styles.button} type="Outline"  onPress={signIn} />
-            <Button title="Register" containerStyle={styles.button} buttonStyle={{backgroundColor:"#1a8cff"}}  onPress={()=>navigation.navigate('Register')} />
+            <Button title="Login"  containerStyle={styles.button} titleStyle={{color:"#fff"}} type="Outline"  onPress={signIn} />
+            <Button title="Register" containerStyle={styles.button} buttonStyle={{backgroundColor:"#cc7a00"}}  onPress={()=>navigation.navigate('Register')} />
             <View style={{height:150}} />
         </KeyboardAvoidingView>
     )
@@ -69,7 +70,7 @@ const styles = StyleSheet.create({
         backgroundColor:"black",
     },
     inputContainer :{
-        width : "85%",
+        width : "100%",
     },
     button:{
         width : 200,

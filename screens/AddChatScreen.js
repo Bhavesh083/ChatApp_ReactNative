@@ -40,7 +40,7 @@ const AddChatScreen = ({navigation}) => {
             <Input placeholder="ENter a chat name" onSubmitEditing={createChat} value={input} onChangeText={(text)=>setInput(text)} leftIcon={
                 <FontAwesome5 name="rocketchat" size={24} color="black" />
             } />
-            <Button containerStyle={{backgroundColor:"#f2f2f2"}} type="Outline" disabled={!input} onPress={createChat} title='Create' />
+            <Button containerStyle={{backgroundColor:"#cc7a00"}} titleStyle={{color:"#fff"}} type="Outline" disabled={!input} onPress={createChat} title='Add Chat' />
         </View>
     )
 }
