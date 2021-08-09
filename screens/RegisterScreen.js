@@ -38,7 +38,7 @@ const RegisterScreen = ({ navigation }) => {
         .then((authUser)=>{
             authUser.user.updateProfile({
                 displayName: name,
-                photoURL: imageUrl || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU1QFXyc9dS6HeQnU8J1WFmbnseruDoSs_vg&usqp=CAU"
+                photoURL: imageUrl || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1bgS5yQJNXLXSgZeiJifeTdNbCYPxb3gnQw&usqp=CAU"
             });
         })
         .catch(error=>alert(error.message));

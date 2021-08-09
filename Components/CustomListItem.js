@@ -20,7 +20,7 @@ const CustomListItem = ({id,chatName,enterChat}) => {
     });
 
     return (
-        <ListItem onPress={()=>enterChat(id,chatName)} key={id} bottomDivider>
+        <ListItem onPress={()=>enterChat(id,chatName)} style={{borderBottomWidth:1,borderBottomColor:"black"}} key={id} >
             <Avatar rounded source={{
                 uri: chatMessages?.[0]?.photoURL || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtygJHG2ryzwK3bkAjNhU66z2P6Kt2nNN5UA&usqp=CAU"}} />
             <ListItem.Content>

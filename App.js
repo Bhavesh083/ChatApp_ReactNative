@@ -17,7 +17,7 @@ const globalScreenOptions = {
   headerStyle: { backgroundColor:"#cc7a00" },
   headerTitleStyle: {color:"white"},
   headerTintColor: "white",
-};
+}; 
 
 export default function App() {
   return (                                                                
@@ -33,7 +33,7 @@ export default function App() {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({ 
   container: {
     flex: 1,
     backgroundColor: '#fff',
