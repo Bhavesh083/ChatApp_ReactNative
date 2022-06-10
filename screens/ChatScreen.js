@@ -25,9 +25,8 @@ const ChatScreen = ({navigation,route}) => {
             headerTitleAlign : "left",
             headerBackTitleVisible:false,
             headerTitle:()=>(
-                <View style={{flexDirection:"row",alignItems:"center"}}>
-                    <Avatar rounded source={{uri:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1bgS5yQJNXLXSgZeiJifeTdNbCYPxb3gnQw&usqp=CAU"}} />
-                    <Text style={{color:"white",marginLeft:10,fontWeight:"700"}}>{route.params.chatName}</Text>
+                <View style={{flexDirection:"row",alignItems:"center",justifyContent:"flex-start",marginLeft:-20}}>
+                    <Text style={{color:"white",fontWeight:"700"}}>{route.params.chatName}</Text>
                 </View>
             ),
             headerLeft:()=>(
@@ -36,11 +35,11 @@ const ChatScreen = ({navigation,route}) => {
                 </TouchableOpacity>
             ),
             headerRight:()=>(
-                <View style={{flexDirection:"row",justifyContent:"space-between",width:80,marginRight:20}}>
-                    <TouchableOpacity >
+                <View style={{marginLeft:10,flexDirection:"row",width:80,marginRight:10,justifyContent:"flex-end"}}>
+                    <TouchableOpacity  >
                         <FontAwesome name="video-camera" size={24} color="white" />
                     </TouchableOpacity>
-                    <TouchableOpacity >
+                    <TouchableOpacity style={{marginLeft:15}} >
                         <Ionicons name="call" size={24} color="white" />
                     </TouchableOpacity>
                 </View>
@@ -99,9 +98,9 @@ const ChatScreen = ({navigation,route}) => {
                         ))}
                     </ScrollView>
                     <View style={styles.footer}>
-                        <TextInput value={input} onChangeText={(text)=>setInput(text)} placeholder="Signal Message" style={styles.textInput} onSubmitEditing={sendMessage} />
+                        <TextInput value={input} onChangeText={(text)=>setInput(text)} placeholder="Message" style={styles.textInput} onSubmitEditing={sendMessage} />
                         <TouchableOpacity onPress={sendMessage} activeOpacity={0.5}>
-                            <Ionicons name="send" size={24} color="#2B68E6" />
+                            <Ionicons name="send" size={24} color="#cc7a00" />
                         </TouchableOpacity>
                     </View>
                     </>
@@ -115,11 +114,12 @@ export default ChatScreen;
 
 const styles = StyleSheet.create({
     container:{
-        flex:1
+        flex:1,
+        backgroundColor:"black",
     },
     receiver:{
         padding:15,
-        backgroundColor:"#ECECEC",
+        backgroundColor:"#555",
         alignSelf:"flex-end",
         borderRadius:20,
         marginRight:15,
@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
     },
     sender:{
         padding:15,
-        backgroundColor:"#ECECEC",
+        backgroundColor:"#333",
         alignSelf:"flex-start",
         borderRadius:20,
         margin:15,
@@ -140,10 +140,10 @@ const styles = StyleSheet.create({
         left:10,
         paddingRight:10,
         fontSize:10,
-        color:"white",
+        color:"#cc7a00",
     },
     receiverText:{
-        color:"black",
+        color:"white",
         fontWeight:"500",
         marginLeft:10,
     },
@@ -151,7 +151,7 @@ const styles = StyleSheet.create({
         color:"white",
         fontWeight:"500",
         marginLeft:10,
-        marginBottom:15,
+        marginBottom:10,
     },
     footer:{
         flexDirection:"row",

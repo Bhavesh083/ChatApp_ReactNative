@@ -20,7 +20,7 @@ const LoginScreen = ({ navigation }) => {
                 <View style={{marginLeft:20}}>
                     <TouchableOpacity style={{flexDirection:"row",alignItems:"center"}} activeOpacity={0.5}>
                         <Avatar rounded size={29} source={{uri:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_DBGrg9oAVHykA4Sqp6GkFiqnQ1MK_7ejcKykRExNEQ5rPaMq_NmY2qIgYsFz11IwmUA&usqp=CAU"}} />
-                        <Text style={{color:"white",fontSize:20,fontWeight:"600",marginLeft:3}} >Login</Text>
+                        <Text style={{color:"white",fontSize:20,fontWeight:"600",marginLeft:3}} >Chatter</Text>
                     </TouchableOpacity>
                 </View>
             )})
